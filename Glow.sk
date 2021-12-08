@@ -1,0 +1,15 @@
+command /glow <text>:
+	permission: glow.use
+	permission message: &c&lITEMSUCHT &8» &7Dazu hast du keine Rechte!
+	usage: &c&lITEMSUCHT &8» &7Bitte verwende /glow an/aus.
+	trigger:
+		if arg is "an":
+			set glowing of player to true
+			send "&c&lITEMSUCHT &8» &7Du glühst jetzt!"
+			stop
+		if arg is "aus":
+			set glowing of player to false
+			send "&c&lITEMSUCHT &8» &7Du glühst jetzt nicht mehr!"
+			stop
+		else:
+			send "&c&lITEMSUCHT &8» &7Bitte benutze /glow an/aus"	
